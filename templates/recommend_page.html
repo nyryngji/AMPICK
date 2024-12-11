@@ -1,0 +1,264 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/recommend_page.css' %}"/>
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <form class="cover" method="POST" action="{% url 'input_page' %}" enctype="multipart/form-data">
+            {% csrf_token %}
+            <p class="title">FIND YOUR TASTE.</p>
+
+            <p>Q1. 어떤 색상을 선호하시나요?</p>
+            <div class="mb-3">
+                <div class="btns">
+                    <div class="form_radio_btn">
+                        <input id="radio-1" type="checkbox" name="color_palettes" value="blue" checked>
+                        <label for="radio-1" class="btn_info">
+                            <div class="color" style="background-color: blue;"></div>
+                            <p>Blue</p>
+                        </label>
+                    </div>
+                                                 
+                    <div class="form_radio_btn">
+                        <input id="radio-2" type="checkbox" name="color_palettes" value="red">
+                        <label for="radio-2" class="btn_info">
+                            <div class="color" style="background-color: red;"></div>
+                            <p>Red</p>
+                        </label>
+                    </div>
+
+                    <div class="form_radio_btn">
+                        <input id="radio-3" type="checkbox" name="color_palettes" value="orange">
+                        <label for="radio-3" class="btn_info">
+                            <div class="color" style="background-color: orange;"></div>
+                            <p>Orange</p>
+                        </label>
+                    </div>
+
+                    <div class="form_radio_btn">
+                        <input id="radio-4" type="checkbox" name="color_palettes" value="yellow">
+                        <label for="radio-4" class="btn_info">
+                            <div class="color" style="background-color: yellow;"></div>
+                            <p>Yellow</p>
+                        </label>
+                    </div>
+
+                    <div class="form_radio_btn">
+                        <input id="radio-5" type="checkbox" name="color_palettes" value="green">
+                        <label for="radio-5" class="btn_info">
+                            <div class="color" style="background-color: green"></div>
+                            <p>Green</p>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="btns">
+                    <div class="form_radio_btn">
+                        <input id="radio-6" type="checkbox" name="color_palettes" value="purple">
+                        <label for="radio-6" class="btn_info">
+                            <div class="color" style="background-color: purple;"></div>
+                            <p>Purple</p>
+                        </label>
+                    </div>
+                                                 
+                    <div class="form_radio_btn">
+                        <input id="radio-7" type="checkbox" name="color_palettes" value="pink">
+                        <label for="radio-7" class="btn_info">
+                            <div class="color" style="background-color: pink;"></div>
+                            <p>Pink</p>
+                        </label>
+                    </div>
+
+                    <div class="form_radio_btn">
+                        <input id="radio-8" type="checkbox" name="color_palettes" value="black">
+                        <label for="radio-8" class="btn_info">
+                            <div class="color" style="background-color: black;"></div>
+                            <p>Black</p>
+                        </label>
+                    </div>
+
+                    <div class="form_radio_btn">
+                        <input id="radio-9" type="checkbox" name="color_palettes" value="white">
+                        <label for="radio-9" class="btn_info">
+                            <div class="color" style="background-color: white; border: 1px solid gray;"></div>
+                            <p>White</p>
+                        </label>
+                    </div>
+
+                    <div class="form_radio_btn">
+                        <input id="radio-10" type="checkbox" name="color_palettes" value="beige">
+                        <label for="radio-10" class="btn_info">
+                            <div class="color" style="background-color: rgb(255, 229, 204);"></div>
+                            <p>Beige</p>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <p>Q2. 어떤 분위기를 좋아하시나요?</p>
+            <div class="novel_atmo_kinds">
+                <div class="btns">
+                    <div class="form_radio_btn">
+                        <input id="atmo-1" type="checkbox" name="novel_atmo" value="mysterious" checked>
+                        <label for="atmo-1" class="btn_info">
+                            <p>#신비로운</p>
+                        </label>
+                    </div>
+                                                 
+                    <div class="form_radio_btn">
+                        <input id="atmo-2" type="checkbox" name="novel_atmo" value="calm">
+                        <label for="atmo-2" class="btn_info">
+                            <p>#차분한</p>
+                        </label>
+                    </div>
+
+                    <div class="form_radio_btn">
+                        <input id="atmo-3" type="checkbox" name="novel_atmo" value="warm">
+                        <label for="atmo-3" class="btn_info">
+                            <p>#따뜻한</p>
+                        </label>
+                    </div>
+
+                    <div class="form_radio_btn">
+                        <input id="atmo-4" type="checkbox" name="novel_atmo" value="luxurious">
+                        <label for="atmo-4" class="btn_info">
+                            <p>#고급스러운</p>
+                        </label>
+                    </div>
+
+                    <div class="form_radio_btn">
+                        <input id="atmo-5" type="checkbox" name="novel_atmo" value="bright">
+                        <label for="atmo-5" class="btn_info">
+                            <p>#화사한</p>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="btns">
+                    <div class="form_radio_btn">
+                        <input id="atmo-6" type="checkbox" name="novel_atmo" value="minimalism">
+                        <label for="atmo-6" class="btn_info">
+                            <p>#미니멀리즘</p>
+                        </label>
+                    </div>
+                                                 
+                    <div class="form_radio_btn">
+                        <input id="atmo-7" type="checkbox" name="novel_atmo" value="dreamlike">
+                        <label for="atmo-7" class="btn_info">
+                            <p>#몽환적인</p>
+                        </label>
+                    </div>
+
+                    <div class="form_radio_btn">
+                        <input id="atmo-8" type="checkbox" name="novel_atmo" value="emotional">
+                        <label for="atmo-8" class="btn_info">
+                            <p>#감성적인</p>
+                        </label>
+                    </div>
+
+                    <div class="form_radio_btn">
+                        <input id="atmo-9" type="checkbox" name="novel_atmo" value="colorful">
+                        <label for="atmo-9" class="btn_info">
+                            <p>#컬러풀한</p>
+                        </label>
+                    </div>
+
+                    <div class="form_radio_btn">
+                        <input id="atmo-10" type="checkbox" name="novel_atmo" value="fresh">
+                        <label for="atmo-10" class="btn_info">
+                            <p>#싱그러운</p>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <p>Q3. 어떤 장르를 선호하시나요?</p>
+            <div class="novel_genre_kinds">
+                <div class="btns">
+                    <div class="form_radio_btn">
+                        <input id="genre-1" type="radio" name="novel_genre" value="standard" checked>
+                        <label for="genre-1" class="btn_info">
+                            <p>#일반소설</p>
+                        </label>
+                    </div>
+                                                 
+                    <div class="form_radio_btn">
+                        <input id="genre-2" type="radio" name="novel_genre" value="fantasy">
+                        <label for="genre-2" class="btn_info">
+                            <p>#판타지</p>
+                        </label>
+                    </div>
+
+                    <div class="form_radio_btn">
+                        <input id="genre-3" type="radio" name="novel_genre" value="romance">
+                        <label for="genre-3" class="btn_info">
+                            <p>#로맨스</p>
+                        </label>
+                    </div>
+
+                    <div class="form_radio_btn">
+                        <input id="genre-4" type="radio" name="novel_genre" value="mistery">
+                        <label for="genre-4" class="btn_info">
+                            <p>#스릴러</p>
+                        </label>
+                    </div>
+
+                    <div class="form_radio_btn">
+                        <input id="genre-5" type="radio" name="novel_genre" value="sf">
+                        <label for="genre-5" class="btn_info">
+                            <p>#SF/과학</p>
+                        </label>
+                    </div>
+
+                    <div class="form_radio_btn">
+                        <input id="genre-6" type="radio" name="novel_genre" value="chung">
+                        <label for="genre-6" class="btn_info">
+                            <p>#청소년</p>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <p>Q4. 인내심에 대해 본인을 어떻게 평가하시나요?</p>
+            <div class="user_patient">
+                <div class="btns">
+                    <div class="form_radio_btn">
+                        <input id="patient-1" type="radio" name="patient" value="lv1" checked>
+                        <label for="patient-1" class="btn_info">
+                            <p>#도닦기 장인</p>
+                        </label>
+                    </div>
+                                                 
+                    <div class="form_radio_btn">
+                        <input id="patient-2" type="radio" name="patient" value="lv2">
+                        <label for="patient-2" class="btn_info">
+                            <p>#컵라면 익는 3분쯤은 참을만 해</p>
+                        </label>
+                    </div>
+
+                    <div class="form_radio_btn">
+                        <input id="patient-3" type="radio" name="patient" value="lv3">
+                        <label for="patient-3" class="btn_info">
+                            <p>#내 사전에 기다림이란 없다</p>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="submit_btn">
+                <div class="color_chip">
+                    <p style="font-size: 25px;">@KYOBO</p>
+                    <p style="font-size: 12px;">Find Your Book</p>
+                </div>
+                <input type="submit" value="YOUR TASTE GUIDE">
+            </div>
+        </form>  
+    </div>
+</body>
+</html>

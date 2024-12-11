@@ -1,0 +1,22 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}"/>
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <div class="cover">
+            <img src="{% static '/img/main_img.png' %}">
+            <a href="{% url 'input_page' %}"><p class="title">#??????</p></a>
+            <p class="sub_title">Who is the Fairest of them all?</p>
+            <p class="about_info">Taste inspired by</p>
+            <p class="kyobo">KYOBO</p>
+        </div>  
+    </div>
+</body>
+</html>

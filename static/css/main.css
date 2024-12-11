@@ -1,0 +1,86 @@
+@font-face {
+    font-family: 'panton_small';
+    src: url('/static/font/PantonNarrow-Trial-Heavy.ttf');
+}
+
+@font-face {
+    font-family: 'panton_big';
+    src: url('/static/font/Panton-BlackCaps.otf');
+}
+
+@font-face {
+    font-family: 'panton_light';
+    src: url('/static/font/PantonNarrow-Trial-Light.ttf');
+}
+
+@font-face {
+    font-family: 'panton_standard';
+    src: url('/static/font/PantonNarrow-Trial-ExtraBold.ttf');
+}
+
+body {
+    margin: 0;
+}
+
+.main {
+    width: 32%; /* 넓이를 화면 전체로 설정 */
+    height: 98vh; /* 높이를 화면 전체로 설정 (옵션) */
+    margin: 0; /* 기본 마진 제거 */
+    padding: 0.5% 34%; /* 기본 패딩 제거 */
+    /* background-image: url('back.jpg');
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat; */
+    background-color: #ebebeb;
+}
+
+.cover {
+    height: 99%;
+    background-size: cover;
+    background-repeat: no-repeat; /* 반복 방지 */
+    background-position: center; /* 중심 정렬 */
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    background-color: white;
+}
+
+.cover img {
+    width: 96%;
+    height: 70%;
+    padding: 2% 2% 0 2%;
+}
+
+.cover p {
+    margin: 0 0 0 16px;
+}
+
+.cover .title {
+    font-size: 50px;
+    font-family: 'panton_big';
+}
+
+.cover .sub_title {
+    font-size: 30px;
+    font-family: 'panton_light';
+}
+
+.cover .about_info {
+    margin-top: 2%;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.cover .kyobo {
+    font-size: 40px;
+    font-weight: 900;
+    font-family: 'panton_standard';
+}
+
+.cover a {
+    text-decoration: none;
+    color: black;
+}
+
+.cover a:hover {
+    text-decoration: none;
+    color: #800020;
+}

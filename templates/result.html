@@ -1,0 +1,36 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/result.css' %}"/>
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <div class="cover">
+            {% if result %}
+                {% for book in result %}
+                    <img src="{{ book.book_img }}">
+                    <p class="title"># {{ book.book_title }}</p>
+                    <p>평점 : {{ book.book_score }}</p>
+                    <p>가격 : {{ book.book_price }}원</p>
+                    <p>총 페이지 : {{ book.book_page }}p</p>
+
+                    <div class="words">
+                        {% for word in book.keyword %}
+                            <p class="keyword">#{{word}}</p>
+                        {% endfor %}
+                    </div>
+
+                {% endfor %}
+
+            {% else %}
+                <p>No recommendation available.</p>
+            {% endif %}
+        </div>  
+    </div>
+</body>
+</html>
